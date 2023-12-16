@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://dwbr2yl08fm84"]
-
-[node name="Main" type="Node"]
-
-[node name="MapHolder" type="Node3D" parent="."]
-
-[node name="SelfPlayerHolder" type="Node" parent="MapHolder"]
-
-[node name="OtherPlayersHolder" type="Node" parent="MapHolder"]

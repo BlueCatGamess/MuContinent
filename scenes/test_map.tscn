@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3l2g7iy7cwqo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsmhd"]
+albedo_color = Color(0.270588, 0.270588, 0.270588, 1)
+
+[node name="TestMap" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+calculate_tangents = false
+use_collision = true
+size = Vector3(20, 1, 20)
+material = SubResource("StandardMaterial3D_gsmhd")
+
+[node name="Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(3.61387, 0, 0, 0, 1, 0, 0, 0, 0.167665, 0.957268, 1, -4.30457)
+calculate_tangents = false
+use_collision = true
+size = Vector3(2, 2, 1)
+
+[node name="Wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(3.61387, 0, 0, 0, 1, 0, 0, 0, 0.167665, -3.81305, 1, 4.96207)
+calculate_tangents = false
+use_collision = true
+size = Vector3(2, 2, 1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.785029, 0.485209, 0.385098, -0.00948858, -0.612177, 0.790664, 0.619386, -0.624348, -0.475973, 0, 7.47505, 0)
+shadow_enabled = true

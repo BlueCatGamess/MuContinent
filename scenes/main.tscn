@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwbr2yl08fm84"]
+
+[ext_resource type="PackedScene" uid="uid://b3l2g7iy7cwqo" path="res://scenes/test_map.tscn" id="1_esfjh"]
+
+[node name="Main" type="Node"]
+
+[node name="MapHolder" type="Node3D" parent="."]
+
+[node name="SelfPlayerHolder" type="Node" parent="MapHolder"]
+
+[node name="OtherPlayersHolder" type="Node" parent="MapHolder"]
+
+[node name="TestMap" parent="MapHolder" instance=ExtResource("1_esfjh")]
+
+[node name="MainCamera" type="Camera3D" parent="."]
+transform = Transform3D(0.694658, -0.622967, 0.35967, 0, 0.5, 0.866025, -0.71934, -0.601592, 0.347329, 13.75, 6.826, 14.165)
+fov = 68.3
+size = 9.445
