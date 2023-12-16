@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bxce1451rry0"]
+
+[ext_resource type="Texture2D" uid="uid://o2a6mifpy4di" path="res://assets/others/move_pivot/MovePivot_material/cursorpin01.png" id="1_tqud7"]
+
+[resource]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 0.368627, 0.678431)
+albedo_texture = ExtResource("1_tqud7")

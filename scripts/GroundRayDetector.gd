@@ -19,4 +19,5 @@ func _physics_process(_delta) -> void:
 		query.collision_mask = int(pow(2, 10-1));
 		
 		var result: Dictionary = space_state.intersect_ray(query);
-		EBus.GroundLeftClicked.emit(result.position); #TODO Create the event receiver
+		if !result.is_empty():
+			EBus.GroundLeftClicked.emit(result.position); #TODO Create the event receiver
