@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://tcprtettsn2c"]
+
+[ext_resource type="PackedScene" uid="uid://bkftmhjclwpvp" path="res://scenes/classesBase/dark_wizard_base.tscn" id="1_nih2d"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nsw0f"]
+
+[node name="PlayerBase" type="CharacterBody3D"]
+
+[node name="DarkWizardBase" parent="." instance=ExtResource("1_nih2d")]
+
+[node name="PlayerBaseColShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_nsw0f")
