@@ -19,8 +19,9 @@ func _physics_process(_delta) -> void:
 	if target == null:
 		return
 	
-	if smoothed_position == self.main_actor.global_transform.origin:
-		return
+	##FIXME Implement a way of not runnig this all time.
+	#if smoothed_position == self.main_actor.global_transform.origin:
+	#	return
 
 	desired_position = target.global_transform.origin + offset;
 	smoothed_position = self.main_actor.global_transform.origin.lerp(desired_position, smooth_force)

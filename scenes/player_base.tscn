@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://tcprtettsn2c"]
+[gd_scene load_steps=5 format=3 uid="uid://tcprtettsn2c"]
 
 [ext_resource type="PackedScene" uid="uid://bkftmhjclwpvp" path="res://scenes/classesBase/dark_wizard_base.tscn" id="1_nih2d"]
+[ext_resource type="Script" path="res://scripts/CharacterMovement.cs" id="2_kkpsn"]
+[ext_resource type="Script" path="res://scripts/CharacterSmoothRotation.gd" id="3_nxjiu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nsw0f"]
 
@@ -11,3 +13,14 @@
 [node name="PlayerBaseColShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_nsw0f")
+
+[node name="CharacterMovement" type="Node" parent="." node_paths=PackedStringArray("nav_agent")]
+script = ExtResource("2_kkpsn")
+nav_agent = NodePath("../NavigationAgent3D")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_height_offset = 0.5
+debug_enabled = true
+
+[node name="CharacterSmoothRotation" type="Node" parent="."]
+script = ExtResource("3_nxjiu")
