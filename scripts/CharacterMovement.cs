@@ -20,7 +20,7 @@ public partial class CharacterMovement : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _PhysicsProcess(double delta)
 	{
-		Move(delta);
+		Move(delta); //TODO remove this from here and move to the states machine or other system
 	}
 
 	public void SetDestination(Vector3 destination) 
@@ -41,15 +41,10 @@ public partial class CharacterMovement : Node
 
 		Vector3 new_velocity = next_path_pos - current_agent_pos;
 		new_velocity = new_velocity.Normalized();
-		new_velocity = new_velocity * 3; //TODO Use here the character movement speed
+		new_velocity = new_velocity * (float)1.5; //TODO Use here the character movement speed
 
 		main_actor.Velocity = new_velocity;
 
-
-		//Transform3D new_transform = main_actor.Transform.LookingAt(main_actor.Transform.Basis.Z, Vector3.Up);
-		//main_actor.Transform = main_actor.Transform.InterpolateWith(new_transform, (float)(rotation_speed * delta));
-		//main_actor.RotateObjectLocal(Vector3.Up, Mathf.Atan2(new_velocity.X, main_actor.Velocity.X));
-		//main_actor.LookAt(new_velocity,Vector3.Up);
 		main_actor.MoveAndSlide();
 
 	}

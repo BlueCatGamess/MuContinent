@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://tcprtettsn2c"]
+[gd_scene load_steps=6 format=3 uid="uid://tcprtettsn2c"]
 
 [ext_resource type="PackedScene" uid="uid://bkftmhjclwpvp" path="res://scenes/classesBase/dark_wizard_base.tscn" id="1_nih2d"]
 [ext_resource type="Script" path="res://scripts/CharacterMovement.cs" id="2_kkpsn"]
 [ext_resource type="Script" path="res://scripts/CharacterSmoothRotation.gd" id="3_nxjiu"]
+[ext_resource type="Script" path="res://scripts/CharacterStateMachine.gd" id="4_jcj7d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nsw0f"]
 
@@ -18,9 +19,15 @@ shape = SubResource("CapsuleShape3D_nsw0f")
 script = ExtResource("2_kkpsn")
 nav_agent = NodePath("../NavigationAgent3D")
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-path_height_offset = 0.5
-debug_enabled = true
-
 [node name="CharacterSmoothRotation" type="Node" parent="."]
 script = ExtResource("3_nxjiu")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_height_offset = 0.5
+
+[node name="CharacterStateMachine" type="Node" parent="." node_paths=PackedStringArray("character_movement", "anim_player")]
+script = ExtResource("4_jcj7d")
+character_movement = NodePath("../CharacterMovement")
+anim_player = NodePath("../DarkWizardBase/AnimationPlayer")
+
+[editable path="DarkWizardBase"]
