@@ -5,6 +5,7 @@ const RAY_LENGTH: int = 1000;
 
 @export var character_state_machine: CharacterStateMachine;
 @export var character_movement: Node;
+@export var player_atk_handler: PlayerAttackHandler;
 var cam: Camera3D;
 
 var result_from_ray: Dictionary;
@@ -13,7 +14,7 @@ var result_from_ray: Dictionary;
 func _ready():
 	cam  = main_actor.get_tree().root.get_node("Main/MainCamera");
 
-func _physics_process(delta) -> void:
+func _physics_process(_delta) -> void:
 	if Input.is_action_pressed("Move"):
 		EBus.PlayerMovePressed.emit();
 		CastRayFromCamera(10);
@@ -22,16 +23,15 @@ func _physics_process(delta) -> void:
 			EBus.GroundLeftClicked.emit(result_from_ray.position);
 			
 	elif Input.is_action_pressed("BasicAttack"):
-		CastRayFromCamera();
-		character_state_machine.current_state = character_state_machine.BaseState.ATTACK;
+		Attack("BasicAttack");
 	elif Input.is_action_pressed("Attack01"):
-		print("Attack01")
+		Attack("Attack01");
 	elif Input.is_action_pressed("Attack02"):
-		print("Attack02")
+		Attack("Attack02");
 	elif Input.is_action_pressed("Attack03"):
-		print("Attack03")
+		Attack("Attack03");
 	elif Input.is_action_pressed("Attack04"):
-		print("Attack04")
+		Attack("Attack04");
 
 func _input(event) -> void:
 	if event.is_action_pressed("Dodge"):
@@ -49,3 +49,6 @@ func CastRayFromCamera(col_mask: int = 0) -> void:
 	
 	result_from_ray = space_state.intersect_ray(query);
 
+func Attack(attack_input: String, col_mask: int = 0) -> void:
+	CastRayFromCamera(col_mask);
+	player_atk_handler.ProcessAttack(result_from_ray,attack_input);

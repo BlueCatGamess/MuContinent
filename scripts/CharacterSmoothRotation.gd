@@ -3,16 +3,24 @@ extends Component
 
 const ROTATION_SPEED: float = 10.0;
 
-var rotation_direction: Vector3;
+var rotation_direction: Vector3 = Vector3.ZERO;
+var previous_rot_direction: Vector3;
+
 
 func _ready():
-	EBus.GroundLeftClicked.connect(OnGroundLeftClicked);
+	#EBus.GroundLeftClicked.connect(OnGroundLeftClicked);
+	pass
 
 func _physics_process(delta: float):
-	if self.main_actor.velocity == Vector3.ZERO:
-		return
+	if self.main_actor.velocity != Vector3.ZERO:
+		rotate(delta);
 	
-	rotate(delta);
+	if rotation_direction == Vector3.ZERO:
+		return
+	main_actor.look_at(rotation_direction,Vector3.UP, true);
+	previous_rot_direction = rotation_direction;
+	rotation_direction = Vector3.ZERO
+	#rotation_direction = Vector3.ZERO;
 
 
 func rotate(delta: float) -> void:
@@ -21,5 +29,6 @@ func rotate(delta: float) -> void:
 func SetRotationDirection(position: Vector3) -> void:
 	rotation_direction = position;
 	
-func OnGroundLeftClicked(position: Vector3) -> void:
-	SetRotationDirection(position);
+	
+#func OnGroundLeftClicked(position: Vector3) -> void:
+	#SetRotationDirection(position);
