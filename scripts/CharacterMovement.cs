@@ -14,13 +14,13 @@ public partial class CharacterMovement : Node
 		event_bus = this.GetTree().Root.GetNode("EBus");
 		main_actor = this.GetParent<CharacterBody3D>();
 
-		event_bus.Connect("GroundLeftClicked", new Callable(this, nameof(OnGroundLeftClicked)));
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _PhysicsProcess(double delta)
 	{
-		Move(delta); //TODO remove this from here and move to the states machine or other system
+		//Move(delta); //TODO remove this from here and move to the states machine or other system
+		return;
 	}
 
 	public void SetDestination(Vector3 destination) 
@@ -41,7 +41,7 @@ public partial class CharacterMovement : Node
 
 		Vector3 new_velocity = next_path_pos - current_agent_pos;
 		new_velocity = new_velocity.Normalized();
-		new_velocity = new_velocity * (float)1.5; //TODO Use here the character movement speed
+		new_velocity = new_velocity * (float)3.0; //TODO Use here the character movement speed
 
 		main_actor.Velocity = new_velocity;
 
@@ -49,8 +49,4 @@ public partial class CharacterMovement : Node
 
 	}
 
-	private void OnGroundLeftClicked(Vector3 position)
-	{
-		SetDestination(position);
-	}
 }

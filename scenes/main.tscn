@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwbr2yl08fm84"]
+[gd_scene load_steps=6 format=3 uid="uid://dwbr2yl08fm84"]
 
 [ext_resource type="PackedScene" uid="uid://tcprtettsn2c" path="res://scenes/player_base.tscn" id="1_ax707"]
 [ext_resource type="PackedScene" uid="uid://b3l2g7iy7cwqo" path="res://scenes/test_map.tscn" id="1_esfjh"]
 [ext_resource type="PackedScene" uid="uid://b160ib4jusns0" path="res://scenes/others/move_pivot.tscn" id="3_6joog"]
 [ext_resource type="Script" path="res://scripts/CameraFollow.gd" id="3_rkqn8"]
 [ext_resource type="Script" path="res://scripts/PivotMoveToClickPos.gd" id="4_dinsa"]
-[ext_resource type="Script" path="res://scripts/GroundRayDetector.gd" id="4_xph4e"]
 
 [node name="Main" type="Node"]
 
@@ -35,6 +34,3 @@ size = 9.445
 script = ExtResource("3_rkqn8")
 target = NodePath("../../MapHolder/SelfPlayerHolder/PlayerBase")
 offset = Vector3(3, 7, 3)
-
-[node name="GroundRayDetector" type="Node" parent="MainCamera"]
-script = ExtResource("4_xph4e")

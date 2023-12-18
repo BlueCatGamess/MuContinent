@@ -18,7 +18,7 @@ var animations: Dictionary = {"Idle": []
 							,"Attack": []
 							,"Die": []};
 
-var current_atk_anim: String;
+var current_atk_anim: String = "Attack_Unarm_01-01";
 
 
 func _ready():
@@ -103,11 +103,11 @@ func attack_state():
 	
 func check_attack_state():
 	var newState = current_state;
-#
-	if anim_player.get_current_animation_position() >= 0.6:
+	#await anim_player.animation_finished;
+	var current_anim_size: float = anim_player.get_current_animation_length();
+	if anim_player.get_current_animation_position() >= current_anim_size - 0.1:
 	#	atkHandler.target = null
-	#	if character_movement_input:
-	#		character_movement_input.canMove = true;
+		character_movement.SetDestination(main_actor.global_position);
 		newState = BaseState.IDLE;
 	#if character_stats.current_life <= 0:
 	#	newState = BaseState.DIE;
