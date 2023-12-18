@@ -21,16 +21,16 @@ func _physics_process(delta) -> void:
 			character_movement.SetDestination(result_from_ray.position);
 			EBus.GroundLeftClicked.emit(result_from_ray.position);
 			
-	if Input.is_action_pressed("BasicAttack"):
+	elif Input.is_action_pressed("BasicAttack"):
 		CastRayFromCamera();
 		character_state_machine.current_state = character_state_machine.BaseState.ATTACK;
-	if Input.is_action_pressed("Attack01"):
+	elif Input.is_action_pressed("Attack01"):
 		print("Attack01")
-	if Input.is_action_pressed("Attack02"):
+	elif Input.is_action_pressed("Attack02"):
 		print("Attack02")
-	if Input.is_action_pressed("Attack03"):
+	elif Input.is_action_pressed("Attack03"):
 		print("Attack03")
-	if Input.is_action_pressed("Attack04"):
+	elif Input.is_action_pressed("Attack04"):
 		print("Attack04")
 
 func _input(event) -> void:
