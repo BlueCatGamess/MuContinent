@@ -25,7 +25,7 @@ func _ready():
 	
 	##TODO make this get the value by the character stats
 	#current_anim_speed = (character_stats.movement_speed / character_stats.BASE_MOV_SPEED) * character_stats.BASE_ANIM_SPEED;
-	
+	#
 	for anim in anim_player.get_animation_list():
 		if anim.contains("Idle"):
 			animations["Idle"].append(anim);
