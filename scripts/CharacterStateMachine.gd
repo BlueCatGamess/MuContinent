@@ -85,7 +85,7 @@ func check_walk_state():
 	return newState
 
 func attack_state():
-	anim_player.play(current_atk_anim, BASE_ANIM_BLEND, current_anim_speed);
+	anim_player.play(current_atk_anim, BASE_ANIM_BLEND, current_anim_speed + 0.2); ##TODO GET THIS FROM ATTACK SPEED
 	#await anim_player.animation_finished;
 	
 	#if anim_player.get_current_animation_position() >= 0.6:

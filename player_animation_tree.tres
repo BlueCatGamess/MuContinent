@@ -1,0 +1,376 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=71 format=3 uid="uid://dnx0lms36lfjm"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ou7lo"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_u8etd"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_7pul6"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1q3n2"]
+animation = &"Idle_Safe"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t1go2"]
+animation = &"Attacking_Unarmed"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kudsv"]
+animation = &"Falling"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t3v6g"]
+animation = &"Walking_Safe"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3rtvm"]
+animation = &"Walking_Unsafe_2HSpear"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a4v1d"]
+animation = &"Attacking_Melee_2HSpear"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_u65yj"]
+animation = &"Walking_Unsafe_2HSword"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gqivv"]
+animation = &"Attacking_Melee_2HSword1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mq546"]
+animation = &"Walking_Unsafe_Dwield"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y4cfe"]
+animation = &"Attacking_Melee_Dwield_LHand1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cktfy"]
+animation = &"Idle_Unsafe_2HSpear"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6xob3"]
+animation = &"Walking_Unsafe_2HStaff"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k8gxw"]
+animation = &"Attacking_Melee_Staff1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yi330"]
+animation = &"Walking_Safe"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sprva"]
+animation = &"Attacking_Unarmed"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_to57x"]
+animation = &"Falling"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jovh1"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ev2lc"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hm66v"]
+animation = &"Attacking_Melee_2HSpear"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_brsl2"]
+animation = &"Idle_Unsafe_Dwield"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cscn0"]
+animation = &"Idle_Unsafe_2HSword"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f2gh6"]
+animation = &"Idle_Unsafe_2HStaff"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e8xew"]
+animation = &"Attacking_Melee_2HSword1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cok2v"]
+animation = &"Attacking_Melee_Dwield_LHand1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sl74j"]
+animation = &"Attacking_Melee_Staff1"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f02ga"]
+animation = &"Idle_Safe"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_vhfof"]
+input_0/name = "Idle"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "Walking"
+input_1/auto_advance = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_xw54r"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_nihb8"]
+input_0/name = "Safe"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "Unsafe"
+input_1/auto_advance = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_gxtap"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_bqrct"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ptqhu"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_u5eky"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_2vqkx"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_kkafl"]
+input_0/name = "2H_Spear"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "2H_Sword"
+input_1/auto_advance = false
+input_1/reset = true
+input_2/name = "Dwield"
+input_2/auto_advance = false
+input_2/reset = true
+input_3/name = "2H_Staff"
+input_3/auto_advance = false
+input_3/reset = true
+input_4/name = "Unarmed"
+input_4/auto_advance = false
+input_4/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_b80in"]
+input_0/name = "Feet"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "Mount"
+input_1/auto_advance = false
+input_1/reset = true
+input_2/name = "Fly"
+input_2/auto_advance = false
+input_2/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_woece"]
+input_0/name = "Feet"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "Mount"
+input_1/auto_advance = false
+input_1/reset = true
+input_2/name = "Fly"
+input_2/auto_advance = false
+input_2/reset = true
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_fyq7y"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_3kfc3"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_e05wn"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_bm7sy"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_yxhbm"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_6e46j"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_jii8f"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_jlmf8"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_phk5k"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ijd0w"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_4wrtv"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_8ksnx"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_qevni"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ku5p4"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_mjo34"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_usb8o"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_tmsga"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_fy8gv"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_110ev"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_8oeum"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_jkxjl"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_egq4p"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_u1aqv"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_bam7r"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_l2xq4"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_axkyx"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_bdld4"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_7msa6"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_0218w"]
+input_0/name = "Safe"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "Unsafe"
+input_1/auto_advance = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_tugaj"]
+input_0/name = "2H_Spear"
+input_0/auto_advance = false
+input_0/reset = true
+input_1/name = "2H_Sword"
+input_1/auto_advance = false
+input_1/reset = true
+input_2/name = "Dwield"
+input_2/auto_advance = false
+input_2/reset = true
+input_3/name = "2H_Staff"
+input_3/auto_advance = false
+input_3/reset = true
+input_4/name = "Unarmed"
+input_4/auto_advance = false
+input_4/reset = true
+
+[resource]
+graph_offset = Vector2(-533.166, -419.738)
+nodes/2HSpear_Attack_Feet/node = SubResource("AnimationNodeOneShot_ou7lo")
+nodes/2HSpear_Attack_Feet/position = Vector2(-200, -500)
+nodes/2HSword_Attack/node = SubResource("AnimationNodeOneShot_u8etd")
+nodes/2HSword_Attack/position = Vector2(-960, -120)
+nodes/2H_Spear_Attack_Mount/node = SubResource("AnimationNodeOneShot_7pul6")
+nodes/2H_Spear_Attack_Mount/position = Vector2(-200, -260)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_f02ga")
+nodes/Animation/position = Vector2(346.667, -2053.33)
+"nodes/Animation 10/node" = SubResource("AnimationNodeAnimation_1q3n2")
+"nodes/Animation 10/position" = Vector2(0, -933.333)
+"nodes/Animation 11/node" = SubResource("AnimationNodeAnimation_t1go2")
+"nodes/Animation 11/position" = Vector2(-53.3333, -800)
+"nodes/Animation 12/node" = SubResource("AnimationNodeAnimation_kudsv")
+"nodes/Animation 12/position" = Vector2(1066.67, 80)
+"nodes/Animation 13/node" = SubResource("AnimationNodeAnimation_t3v6g")
+"nodes/Animation 13/position" = Vector2(106.667, -533.333)
+"nodes/Animation 14/node" = SubResource("AnimationNodeAnimation_3rtvm")
+"nodes/Animation 14/position" = Vector2(-680, -580)
+"nodes/Animation 15/node" = SubResource("AnimationNodeAnimation_a4v1d")
+"nodes/Animation 15/position" = Vector2(-680, -440)
+"nodes/Animation 16/node" = SubResource("AnimationNodeAnimation_u65yj")
+"nodes/Animation 16/position" = Vector2(-1460, -80)
+"nodes/Animation 17/node" = SubResource("AnimationNodeAnimation_gqivv")
+"nodes/Animation 17/position" = Vector2(-1420, 60)
+"nodes/Animation 18/node" = SubResource("AnimationNodeAnimation_mq546")
+"nodes/Animation 18/position" = Vector2(-1560, 200)
+"nodes/Animation 19/node" = SubResource("AnimationNodeAnimation_y4cfe")
+"nodes/Animation 19/position" = Vector2(-1600, 360)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_cktfy")
+"nodes/Animation 2/position" = Vector2(-560, -2160)
+"nodes/Animation 20/node" = SubResource("AnimationNodeAnimation_6xob3")
+"nodes/Animation 20/position" = Vector2(-1620, 580)
+"nodes/Animation 21/node" = SubResource("AnimationNodeAnimation_k8gxw")
+"nodes/Animation 21/position" = Vector2(-1620, 720)
+"nodes/Animation 22/node" = SubResource("AnimationNodeAnimation_yi330")
+"nodes/Animation 22/position" = Vector2(-840, 660)
+"nodes/Animation 23/node" = SubResource("AnimationNodeAnimation_sprva")
+"nodes/Animation 23/position" = Vector2(-820, 820)
+"nodes/Animation 24/node" = SubResource("AnimationNodeAnimation_to57x")
+"nodes/Animation 24/position" = Vector2(1253.33, -373.333)
+"nodes/Animation 25/node" = SubResource("AnimationNodeAnimation_jovh1")
+"nodes/Animation 25/position" = Vector2(-500, -240)
+"nodes/Animation 26/node" = SubResource("AnimationNodeAnimation_ev2lc")
+"nodes/Animation 26/position" = Vector2(-500, -120)
+"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_hm66v")
+"nodes/Animation 3/position" = Vector2(-586.667, -2000)
+"nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_brsl2")
+"nodes/Animation 4/position" = Vector2(-613.333, -1466.67)
+"nodes/Animation 5/node" = SubResource("AnimationNodeAnimation_cscn0")
+"nodes/Animation 5/position" = Vector2(-560, -1813.33)
+"nodes/Animation 6/node" = SubResource("AnimationNodeAnimation_f2gh6")
+"nodes/Animation 6/position" = Vector2(-560, -1146.67)
+"nodes/Animation 7/node" = SubResource("AnimationNodeAnimation_e8xew")
+"nodes/Animation 7/position" = Vector2(-613.333, -1626.67)
+"nodes/Animation 8/node" = SubResource("AnimationNodeAnimation_cok2v")
+"nodes/Animation 8/position" = Vector2(-720, -1333.33)
+"nodes/Animation 9/node" = SubResource("AnimationNodeAnimation_sl74j")
+"nodes/Animation 9/position" = Vector2(-533.333, -986.667)
+nodes/Base_State/node = SubResource("AnimationNodeTransition_vhfof")
+nodes/Base_State/position = Vector2(1866.67, -320)
+nodes/Idl/node = SubResource("AnimationNodeTimeScale_xw54r")
+nodes/Idl/position = Vector2(-213.333, -986.667)
+nodes/Idle_Safe_State/node = SubResource("AnimationNodeTransition_nihb8")
+nodes/Idle_Safe_State/position = Vector2(853.333, -1866.67)
+nodes/Idle_Un_2HSpear_attack/node = SubResource("AnimationNodeOneShot_gxtap")
+nodes/Idle_Un_2HSpear_attack/position = Vector2(-80, -2053.33)
+nodes/Idle_Un_2HStaff/node = SubResource("AnimationNodeOneShot_bqrct")
+nodes/Idle_Un_2HStaff/position = Vector2(-26.6667, -1200)
+nodes/Idle_Un_2HSword/node = SubResource("AnimationNodeOneShot_ptqhu")
+nodes/Idle_Un_2HSword/position = Vector2(-106.667, -1813.33)
+nodes/Idle_Un_DWield/node = SubResource("AnimationNodeOneShot_u5eky")
+nodes/Idle_Un_DWield/position = Vector2(-186.667, -1520)
+nodes/Idle_Un_Unarm/node = SubResource("AnimationNodeOneShot_2vqkx")
+nodes/Idle_Un_Unarm/position = Vector2(346.667, -1120)
+nodes/Idle_Unsafe_Wep_State/node = SubResource("AnimationNodeTransition_kkafl")
+nodes/Idle_Unsafe_Wep_State/position = Vector2(453.333, -1706.67)
+nodes/MoveTypeWalkSafe/node = SubResource("AnimationNodeTransition_b80in")
+nodes/MoveTypeWalkSafe/position = Vector2(520, -400)
+nodes/MoveTypeWalkUnsafe2H_Spear/node = SubResource("AnimationNodeTransition_woece")
+nodes/MoveTypeWalkUnsafe2H_Spear/position = Vector2(180, -320)
+"nodes/OneShot 3/node" = SubResource("AnimationNodeOneShot_fyq7y")
+"nodes/OneShot 3/position" = Vector2(-1040, 200)
+"nodes/OneShot 4/node" = SubResource("AnimationNodeOneShot_3kfc3")
+"nodes/OneShot 4/position" = Vector2(-1160, 640)
+"nodes/OneShot 5/node" = SubResource("AnimationNodeOneShot_e05wn")
+"nodes/OneShot 5/position" = Vector2(-400, 660)
+"nodes/OneShot 6/node" = SubResource("AnimationNodeOneShot_bm7sy")
+"nodes/OneShot 6/position" = Vector2(1626.67, -160)
+"nodes/OneShot 7/node" = SubResource("AnimationNodeOneShot_yxhbm")
+"nodes/OneShot 7/position" = Vector2(1626.67, -453.333)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_7msa6")
+nodes/TimeScale/position = Vector2(640, -2026.67)
+"nodes/TimeScale 10/node" = SubResource("AnimationNodeTimeScale_6e46j")
+"nodes/TimeScale 10/position" = Vector2(186.667, -800)
+"nodes/TimeScale 11/node" = SubResource("AnimationNodeTimeScale_jii8f")
+"nodes/TimeScale 11/position" = Vector2(1306.67, 80)
+"nodes/TimeScale 12/node" = SubResource("AnimationNodeTimeScale_jlmf8")
+"nodes/TimeScale 12/position" = Vector2(293.333, -533.333)
+"nodes/TimeScale 13/node" = SubResource("AnimationNodeTimeScale_phk5k")
+"nodes/TimeScale 13/position" = Vector2(-380, -600)
+"nodes/TimeScale 14/node" = SubResource("AnimationNodeTimeScale_ijd0w")
+"nodes/TimeScale 14/position" = Vector2(-380, -420)
+"nodes/TimeScale 15/node" = SubResource("AnimationNodeTimeScale_4wrtv")
+"nodes/TimeScale 15/position" = Vector2(-1160, -80)
+"nodes/TimeScale 16/node" = SubResource("AnimationNodeTimeScale_8ksnx")
+"nodes/TimeScale 16/position" = Vector2(-1160, 80)
+"nodes/TimeScale 17/node" = SubResource("AnimationNodeTimeScale_qevni")
+"nodes/TimeScale 17/position" = Vector2(-1300, 240)
+"nodes/TimeScale 18/node" = SubResource("AnimationNodeTimeScale_ku5p4")
+"nodes/TimeScale 18/position" = Vector2(-1280, 420)
+"nodes/TimeScale 19/node" = SubResource("AnimationNodeTimeScale_mjo34")
+"nodes/TimeScale 19/position" = Vector2(-1380, 580)
+"nodes/TimeScale 2/node" = SubResource("AnimationNodeTimeScale_usb8o")
+"nodes/TimeScale 2/position" = Vector2(-293.333, -2133.33)
+"nodes/TimeScale 20/node" = SubResource("AnimationNodeTimeScale_tmsga")
+"nodes/TimeScale 20/position" = Vector2(-1360, 740)
+"nodes/TimeScale 21/node" = SubResource("AnimationNodeTimeScale_fy8gv")
+"nodes/TimeScale 21/position" = Vector2(-660, 660)
+"nodes/TimeScale 22/node" = SubResource("AnimationNodeTimeScale_110ev")
+"nodes/TimeScale 22/position" = Vector2(-560, 840)
+"nodes/TimeScale 23/node" = SubResource("AnimationNodeTimeScale_8oeum")
+"nodes/TimeScale 23/position" = Vector2(1440, -346.667)
+"nodes/TimeScale 3/node" = SubResource("AnimationNodeTimeScale_jkxjl")
+"nodes/TimeScale 3/position" = Vector2(-293.333, -1973.33)
+"nodes/TimeScale 4/node" = SubResource("AnimationNodeTimeScale_egq4p")
+"nodes/TimeScale 4/position" = Vector2(-346.667, -1493.33)
+"nodes/TimeScale 5/node" = SubResource("AnimationNodeTimeScale_u1aqv")
+"nodes/TimeScale 5/position" = Vector2(-320, -1813.33)
+"nodes/TimeScale 6/node" = SubResource("AnimationNodeTimeScale_bam7r")
+"nodes/TimeScale 6/position" = Vector2(-266.667, -1173.33)
+"nodes/TimeScale 7/node" = SubResource("AnimationNodeTimeScale_l2xq4")
+"nodes/TimeScale 7/position" = Vector2(-320, -1653.33)
+"nodes/TimeScale 8/node" = SubResource("AnimationNodeTimeScale_axkyx")
+"nodes/TimeScale 8/position" = Vector2(-400, -1306.67)
+"nodes/TimeScale 9/node" = SubResource("AnimationNodeTimeScale_bdld4")
+"nodes/TimeScale 9/position" = Vector2(160, -1020)
+nodes/Walk_Safe_State/node = SubResource("AnimationNodeTransition_0218w")
+nodes/Walk_Safe_State/position = Vector2(720, -240)
+nodes/Walk_Unsf_Wep_state/node = SubResource("AnimationNodeTransition_tugaj")
+nodes/Walk_Unsf_Wep_state/position = Vector2(460, -20)
+nodes/output/position = Vector2(2266.67, -373.333)
+node_connections = [&"2HSpear_Attack_Feet", 0, &"TimeScale 13", &"2HSpear_Attack_Feet", 1, &"TimeScale 14", &"2HSword_Attack", 0, &"TimeScale 15", &"2HSword_Attack", 1, &"TimeScale 16", &"2H_Spear_Attack_Mount", 0, &"Animation 25", &"2H_Spear_Attack_Mount", 1, &"Animation 26", &"Base_State", 0, &"OneShot 7", &"Base_State", 1, &"OneShot 6", &"Idl", 0, &"Animation 9", &"Idle_Safe_State", 0, &"TimeScale", &"Idle_Safe_State", 1, &"Idle_Unsafe_Wep_State", &"Idle_Un_2HSpear_attack", 0, &"TimeScale 2", &"Idle_Un_2HSpear_attack", 1, &"TimeScale 3", &"Idle_Un_2HStaff", 0, &"TimeScale 6", &"Idle_Un_2HStaff", 1, &"Idl", &"Idle_Un_2HSword", 0, &"TimeScale 5", &"Idle_Un_2HSword", 1, &"TimeScale 7", &"Idle_Un_DWield", 0, &"TimeScale 4", &"Idle_Un_DWield", 1, &"TimeScale 8", &"Idle_Un_Unarm", 0, &"TimeScale 9", &"Idle_Un_Unarm", 1, &"TimeScale 10", &"Idle_Unsafe_Wep_State", 0, &"Idle_Un_2HSpear_attack", &"Idle_Unsafe_Wep_State", 1, &"Idle_Un_2HSword", &"Idle_Unsafe_Wep_State", 2, &"Idle_Un_DWield", &"Idle_Unsafe_Wep_State", 3, &"Idle_Un_2HStaff", &"Idle_Unsafe_Wep_State", 4, &"Idle_Un_Unarm", &"MoveTypeWalkSafe", 0, &"TimeScale 12", &"MoveTypeWalkUnsafe2H_Spear", 0, &"2HSpear_Attack_Feet", &"MoveTypeWalkUnsafe2H_Spear", 1, &"2H_Spear_Attack_Mount", &"OneShot 3", 0, &"TimeScale 17", &"OneShot 3", 1, &"TimeScale 18", &"OneShot 4", 0, &"TimeScale 19", &"OneShot 4", 1, &"TimeScale 20", &"OneShot 5", 0, &"TimeScale 21", &"OneShot 5", 1, &"TimeScale 22", &"OneShot 6", 0, &"Walk_Safe_State", &"OneShot 6", 1, &"TimeScale 11", &"OneShot 7", 0, &"Idle_Safe_State", &"OneShot 7", 1, &"TimeScale 23", &"TimeScale", 0, &"Animation", &"TimeScale 10", 0, &"Animation 11", &"TimeScale 11", 0, &"Animation 12", &"TimeScale 12", 0, &"Animation 13", &"TimeScale 13", 0, &"Animation 14", &"TimeScale 14", 0, &"Animation 15", &"TimeScale 15", 0, &"Animation 16", &"TimeScale 16", 0, &"Animation 17", &"TimeScale 17", 0, &"Animation 18", &"TimeScale 18", 0, &"Animation 19", &"TimeScale 19", 0, &"Animation 20", &"TimeScale 2", 0, &"Animation 2", &"TimeScale 20", 0, &"Animation 21", &"TimeScale 21", 0, &"Animation 22", &"TimeScale 22", 0, &"Animation 23", &"TimeScale 23", 0, &"Animation 24", &"TimeScale 3", 0, &"Animation 3", &"TimeScale 4", 0, &"Animation 4", &"TimeScale 5", 0, &"Animation 5", &"TimeScale 6", 0, &"Animation 6", &"TimeScale 7", 0, &"Animation 7", &"TimeScale 8", 0, &"Animation 8", &"TimeScale 9", 0, &"Animation 10", &"Walk_Safe_State", 0, &"MoveTypeWalkSafe", &"Walk_Safe_State", 1, &"Walk_Unsf_Wep_state", &"Walk_Unsf_Wep_state", 0, &"MoveTypeWalkUnsafe2H_Spear", &"Walk_Unsf_Wep_state", 1, &"2HSword_Attack", &"Walk_Unsf_Wep_state", 2, &"OneShot 3", &"Walk_Unsf_Wep_state", 3, &"OneShot 4", &"Walk_Unsf_Wep_state", 4, &"OneShot 5", &"output", 0, &"Base_State"]

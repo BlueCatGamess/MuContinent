@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://tcprtettsn2c"]
+[gd_scene load_steps=51 format=3 uid="uid://tcprtettsn2c"]
 
 [ext_resource type="PackedScene" uid="uid://bkftmhjclwpvp" path="res://scenes/classesBase/dark_wizard_base.tscn" id="1_nih2d"]
 [ext_resource type="Script" path="res://scripts/CharacterMovement.cs" id="2_kkpsn"]
@@ -6,91 +6,186 @@
 [ext_resource type="Script" path="res://scripts/CharacterStateMachine.gd" id="4_jcj7d"]
 [ext_resource type="Script" path="res://scripts/PlayerInput.gd" id="5_c0u7f"]
 [ext_resource type="Script" path="res://scripts/PlayerAttackHandler.gd" id="6_vdra3"]
+[ext_resource type="Animation" uid="uid://02vfmsmbncop" path="res://assets/classes/darkWizard/DW_animations/ Attack_DHspear_02-01.res" id="7_aqp1x"]
+[ext_resource type="Animation" uid="uid://d0byx5n3r2jnm" path="res://assets/classes/darkWizard/DW_animations/Attack_Bow_01-01.res" id="8_u3syd"]
+[ext_resource type="Animation" uid="uid://chbeyj0ah4yf5" path="res://assets/classes/darkWizard/DW_animations/Attack_CrossBow_01-01.res" id="9_0qgy5"]
+[ext_resource type="Animation" uid="uid://jjtalco85msp" path="res://assets/classes/darkWizard/DW_animations/Attack_Dhand_01-01.res" id="10_hvdrt"]
+[ext_resource type="Animation" uid="uid://c8c8lm3xcogrg" path="res://assets/classes/darkWizard/DW_animations/Attack_Dhand_02-01.res" id="11_m87tj"]
+[ext_resource type="Animation" uid="uid://cy45un6qha8fw" path="res://assets/classes/darkWizard/DW_animations/Attack_Dhand_03-01.res" id="12_alhmc"]
+[ext_resource type="Animation" uid="uid://oku3x84elsyg" path="res://assets/classes/darkWizard/DW_animations/Attack_DHspear_01-01.res" id="13_p84f0"]
+[ext_resource type="Animation" uid="uid://btbnbgs4imfdw" path="res://assets/classes/darkWizard/DW_animations/Attack_DHspear_03-01.res" id="14_5sc2r"]
+[ext_resource type="Animation" uid="uid://d3s6ur1wpxss2" path="res://assets/classes/darkWizard/DW_animations/Attack_DHspear_04-01.res" id="15_qrwqw"]
+[ext_resource type="Animation" uid="uid://bltqxdt3cvyup" path="res://assets/classes/darkWizard/DW_animations/Attack_DHstaff_01-01.res" id="16_u4f5n"]
+[ext_resource type="Animation" uid="uid://c40q8l3at1btb" path="res://assets/classes/darkWizard/DW_animations/Attack_DHstaff_02-01.res" id="17_wad3u"]
+[ext_resource type="Animation" uid="uid://c5ghbuu3t3vm7" path="res://assets/classes/darkWizard/DW_animations/Attack_Dwield_01-01.res" id="18_fvjeg"]
+[ext_resource type="Animation" uid="uid://bgqhk7giruwp5" path="res://assets/classes/darkWizard/DW_animations/Attack_Dwield_01-02.res" id="19_6a0f8"]
+[ext_resource type="Animation" uid="uid://cvgsh8poc2re2" path="res://assets/classes/darkWizard/DW_animations/Attack_Dwield_02-01.res" id="20_eok1p"]
+[ext_resource type="Animation" uid="uid://bfxngqpydj30" path="res://assets/classes/darkWizard/DW_animations/Attack_Dwield_02-02.res" id="21_y40gs"]
+[ext_resource type="Animation" uid="uid://0hm1gronjocq" path="res://assets/classes/darkWizard/DW_animations/Attack_Spell_Projectile.res" id="22_p7jqy"]
+[ext_resource type="Animation" uid="uid://di0khp7ptjpe1" path="res://assets/classes/darkWizard/DW_animations/Attack_Spell_Projectile_02.res" id="23_6x2gg"]
+[ext_resource type="Animation" uid="uid://dsq5ky6bwe4gr" path="res://assets/classes/darkWizard/DW_animations/Attack_Unarm_01-01.res" id="24_v5h0r"]
+[ext_resource type="Animation" uid="uid://ohnqh0sat4ux" path="res://assets/classes/darkWizard/DW_animations/default_pose.res" id="25_18fct"]
+[ext_resource type="Animation" uid="uid://beyud4orattaa" path="res://assets/classes/darkWizard/DW_animations/Die.res" id="26_nlx7s"]
+[ext_resource type="Animation" uid="uid://1tfcvgdmseah" path="res://assets/classes/darkWizard/DW_animations/Idle_Safe.res" id="27_7gjg1"]
+[ext_resource type="Animation" uid="uid://0s6kaqklkl38" path="res://assets/classes/darkWizard/DW_animations/Idle_Uns_Bow.res" id="28_3mkw6"]
+[ext_resource type="Animation" uid="uid://dexrylf27cd7q" path="res://assets/classes/darkWizard/DW_animations/Idle_Uns_CrossBow.res" id="29_j6o8d"]
+[ext_resource type="Animation" uid="uid://d05ntec7ifjdt" path="res://assets/classes/darkWizard/DW_animations/Idle_Uns_Dhand.res" id="30_dibyi"]
+[ext_resource type="Animation" uid="uid://cuhpl4umjp1e6" path="res://assets/classes/darkWizard/DW_animations/Idle_Uns_DHspear.res" id="31_k3b6i"]
+[ext_resource type="Animation" uid="uid://c0hllb0wb3ux4" path="res://assets/classes/darkWizard/DW_animations/Idle_Uns_DHstaff.res" id="32_ii6xj"]
+[ext_resource type="Animation" uid="uid://bmi5kwm1dhhyu" path="res://assets/classes/darkWizard/DW_animations/Idle_Uns_Dwield.res" id="33_r4y11"]
+[ext_resource type="Animation" uid="uid://cebjw2xprqg62" path="res://assets/classes/darkWizard/DW_animations/Run_Uns_Bow.res" id="34_5dv5k"]
+[ext_resource type="Animation" uid="uid://bmc8o8h6rm5rh" path="res://assets/classes/darkWizard/DW_animations/Run_Uns_CrossBow.res" id="35_gu78k"]
+[ext_resource type="Animation" uid="uid://cl5mnxlvukin5" path="res://assets/classes/darkWizard/DW_animations/Run_Uns_Dhand.res" id="36_10kwo"]
+[ext_resource type="Animation" uid="uid://ch8qnwj2ycs8s" path="res://assets/classes/darkWizard/DW_animations/Run_Uns_DHspear.res" id="37_px43t"]
+[ext_resource type="Animation" uid="uid://bywjhxqrmeara" path="res://assets/classes/darkWizard/DW_animations/Run_Uns_DHstaff.res" id="38_e3cx8"]
+[ext_resource type="Animation" uid="uid://e7lha7g8ow4f" path="res://assets/classes/darkWizard/DW_animations/Run_Uns_Dwield.res" id="39_t1gox"]
+[ext_resource type="Animation" uid="uid://dbdrqdpf1bymq" path="res://assets/classes/darkWizard/DW_animations/Run_Uns_Unarm.res" id="40_m1uki"]
+[ext_resource type="Animation" uid="uid://dlit7tpe8ipq8" path="res://assets/classes/darkWizard/DW_animations/Walk_Safe.res" id="41_0gdub"]
+[ext_resource type="Animation" uid="uid://b8s30m03j8pk0" path="res://assets/classes/darkWizard/DW_animations/Walk_Uns_Bow.res" id="42_an7jw"]
+[ext_resource type="Animation" uid="uid://hvstc0qbfmpc" path="res://assets/classes/darkWizard/DW_animations/Walk_Uns_CrossBow.res" id="43_xdyu5"]
+[ext_resource type="Animation" uid="uid://cibh3k66po7vk" path="res://assets/classes/darkWizard/DW_animations/Walk_Uns_Dhand.res" id="44_aj2bd"]
+[ext_resource type="Animation" uid="uid://dxl7uhesuv70w" path="res://assets/classes/darkWizard/DW_animations/Walk_Uns_DHspear.res" id="45_spu42"]
+[ext_resource type="Animation" uid="uid://4t4alh01we2e" path="res://assets/classes/darkWizard/DW_animations/Walk_Uns_DHstaff.res" id="46_cnu7h"]
+[ext_resource type="Animation" uid="uid://cnjchcxi7iono" path="res://assets/classes/darkWizard/DW_animations/Walk_Uns_Dwield.res" id="47_ae564"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://dnx0lms36lfjm" path="res://player_animation_tree.tres" id="48_c0au1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nsw0f"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8i252"]
+_data = {
+" Attack_DHspear_02-01": ExtResource("7_aqp1x"),
+"Attack_Bow_01-01": ExtResource("8_u3syd"),
+"Attack_CrossBow_01-01": ExtResource("9_0qgy5"),
+"Attack_DHspear_01-01": ExtResource("13_p84f0"),
+"Attack_DHspear_03-01": ExtResource("14_5sc2r"),
+"Attack_DHspear_04-01": ExtResource("15_qrwqw"),
+"Attack_DHstaff_01-01": ExtResource("16_u4f5n"),
+"Attack_DHstaff_02-01": ExtResource("17_wad3u"),
+"Attack_Dhand_01-01": ExtResource("10_hvdrt"),
+"Attack_Dhand_02-01": ExtResource("11_m87tj"),
+"Attack_Dhand_03-01": ExtResource("12_alhmc"),
+"Attack_Dwield_01-01": ExtResource("18_fvjeg"),
+"Attack_Dwield_01-02": ExtResource("19_6a0f8"),
+"Attack_Dwield_02-01": ExtResource("20_eok1p"),
+"Attack_Dwield_02-02": ExtResource("21_y40gs"),
+"Attack_Spell_Projectile": ExtResource("22_p7jqy"),
+"Attack_Spell_Projectile_02": ExtResource("23_6x2gg"),
+"Attack_Unarm_01-01": ExtResource("24_v5h0r"),
+"Die": ExtResource("26_nlx7s"),
+"Idle_Safe": ExtResource("27_7gjg1"),
+"Idle_Uns_Bow": ExtResource("28_3mkw6"),
+"Idle_Uns_CrossBow": ExtResource("29_j6o8d"),
+"Idle_Uns_DHspear": ExtResource("31_k3b6i"),
+"Idle_Uns_DHstaff": ExtResource("32_ii6xj"),
+"Idle_Uns_Dhand": ExtResource("30_dibyi"),
+"Idle_Uns_Dwield": ExtResource("33_r4y11"),
+"Run_Uns_Bow": ExtResource("34_5dv5k"),
+"Run_Uns_CrossBow": ExtResource("35_gu78k"),
+"Run_Uns_DHspear": ExtResource("37_px43t"),
+"Run_Uns_DHstaff": ExtResource("38_e3cx8"),
+"Run_Uns_Dhand": ExtResource("36_10kwo"),
+"Run_Uns_Dwield": ExtResource("39_t1gox"),
+"Run_Uns_Unarm": ExtResource("40_m1uki"),
+"Walk_Safe": ExtResource("41_0gdub"),
+"Walk_Uns_Bow": ExtResource("42_an7jw"),
+"Walk_Uns_CrossBow": ExtResource("43_xdyu5"),
+"Walk_Uns_DHspear": ExtResource("45_spu42"),
+"Walk_Uns_DHstaff": ExtResource("46_cnu7h"),
+"Walk_Uns_Dhand": ExtResource("44_aj2bd"),
+"Walk_Uns_Dwield": ExtResource("47_ae564"),
+"default_pose": ExtResource("25_18fct")
+}
 
 [node name="PlayerBase" type="CharacterBody3D"]
 
 [node name="DarkWizardBase" parent="." instance=ExtResource("1_nih2d")]
 
 [node name="Skeleton3D" parent="DarkWizardBase/DarkWizard" index="0"]
-bones/1/position = Vector3(-3.7253e-09, -6.51925e-09, -107.295)
-bones/2/position = Vector3(0.731996, -0.172768, 1.05011e-05)
-bones/3/position = Vector3(-1.36277e-05, 2.10208e-05, 10.2815)
-bones/3/rotation = Quaternion(0.0860289, 0.975291, 0.198355, -0.0454163)
-bones/4/position = Vector3(49.4305, -2.97889e-06, -6.31355e-06)
-bones/4/rotation = Quaternion(-3.56366e-09, -4.8462e-09, -0.131009, 0.991381)
-bones/5/position = Vector3(49.4305, -3.05894e-06, 2.56835e-06)
-bones/5/rotation = Quaternion(-0.0119163, -0.0674994, 0.019459, 0.997458)
-bones/6/position = Vector3(11.5912, 14.9082, -5.96046e-08)
-bones/6/rotation = Quaternion(6.30678e-10, 1.92465e-09, 0.707107, 0.707107)
-bones/9/position = Vector3(1.57631e-05, -1.16101e-05, -10.2815)
-bones/9/rotation = Quaternion(0.107278, 0.990491, -0.0338517, 0.0792058)
-bones/10/position = Vector3(49.4305, 3.34636e-06, 3.02331e-06)
-bones/10/rotation = Quaternion(1.39993e-08, -1.84124e-08, -0.290777, 0.956791)
-bones/11/position = Vector3(49.4305, -4.00201e-06, -9.28994e-08)
-bones/11/rotation = Quaternion(0.0383839, 0.0394409, 0.184876, 0.98122)
-bones/12/position = Vector3(11.5912, 14.9082, -9.94653e-07)
-bones/12/rotation = Quaternion(-4.70976e-09, 1.95882e-09, 0.707107, 0.707107)
-bones/13/position = Vector3(4.16146, -1.24491e-07, -2.93078e-07)
+bones/0/position = Vector3(0, 109.951, 0)
+bones/0/rotation = Quaternion(-0.5, -0.5, -0.5, 0.5)
+bones/1/position = Vector3(0, 0, -109.958)
+bones/1/rotation = Quaternion(0, 0, 0.707106, 0.707107)
+bones/2/position = Vector3(0, 0, 0)
+bones/2/rotation = Quaternion(-0.500047, -0.499877, -0.499953, 0.500124)
+bones/3/position = Vector3(-0.00158795, 1.84201e-05, 10.2815)
+bones/3/rotation = Quaternion(0.0499736, 0.998751, 8.97214e-06, 6.47252e-05)
+bones/4/position = Vector3(49.4305, 0.000356791, 0.00125028)
+bones/4/rotation = Quaternion(6.64762e-06, -5.17124e-06, -0.099831, 0.995004)
+bones/5/position = Vector3(49.4305, 0.000122676, 0.000685626)
+bones/5/rotation = Quaternion(-7.47037e-05, 0.00148071, 0.0499703, 0.99875)
+bones/6/position = Vector3(11.5909, 14.9085, 0.034537)
+bones/6/rotation = Quaternion(-0.00105318, -0.00105375, 0.707112, 0.707099)
+bones/9/position = Vector3(0.00159558, -7.71732e-06, -10.2815)
+bones/9/rotation = Quaternion(0.0499736, 0.998751, 9.9897e-06, 6.47252e-05)
+bones/10/position = Vector3(49.4305, 0.000355208, 0.00125306)
+bones/10/rotation = Quaternion(7.66424e-06, -5.11719e-06, -0.0998227, 0.995005)
+bones/11/position = Vector3(49.4305, -0.000706654, 0.000686504)
+bones/11/rotation = Quaternion(-7.89552e-05, 0.00156593, 0.0499622, 0.99875)
+bones/12/position = Vector3(11.5909, 14.9085, 0.0365162)
+bones/12/rotation = Quaternion(-0.00111352, -0.00111409, 0.707114, 0.707098)
+bones/13/position = Vector3(4.16146, -1.3171e-05, -3.01813e-07)
 bones/13/rotation = Quaternion(4.55756e-09, 3.57432e-10, -1.52444e-06, 1)
-bones/15/position = Vector3(3.58622, -0.0157034, 0.313765)
-bones/15/rotation = Quaternion(-0.00191657, -0.0473759, 0.0438091, 0.997914)
-bones/16/position = Vector3(19.7953, -0.0197756, 4.13659e-05)
-bones/16/rotation = Quaternion(-0.00100637, 0.000123374, -0.150021, 0.988682)
-bones/17/position = Vector3(26.0096, -0.0040788, -1.35206e-06)
-bones/18/position = Vector3(5.14077, -9.35652e-07, 8.62718e-07)
-bones/18/rotation = Quaternion(0.130469, 0.0155975, 0.0903352, 0.987205)
-bones/19/position = Vector3(6.88433, -6.88428, -1.87309e-05)
-bones/19/rotation = Quaternion(3.17305e-08, -2.69175e-06, 0.92416, -0.382005)
-bones/20/position = Vector3(15.4556, -0.0119801, -1.13673e-06)
-bones/20/rotation = Quaternion(1.09034e-07, 4.88009e-07, -0.217546, 0.97605)
-bones/21/position = Vector3(5.23503e-06, 0.00411721, -6.47736)
-bones/22/position = Vector3(13.4002, 2.05472e-06, 2.03844e-05)
-bones/22/rotation = Quaternion(0.433834, -0.320347, -0.264044, 0.799654)
-bones/23/position = Vector3(37.6304, -1.39113e-05, 8.35365e-06)
-bones/23/rotation = Quaternion(5.38379e-09, -6.30377e-09, -0.933807, 0.357777)
-bones/24/position = Vector3(27.4736, 1.52341e-05, -1.63156e-06)
-bones/24/rotation = Quaternion(0.780276, 0.561111, 0.120285, 0.248707)
-bones/25/position = Vector3(10.4239, -1.80958, -0.0311026)
-bones/25/rotation = Quaternion(0.000404369, -0.000167498, 0.382683, 0.92388)
-bones/26/position = Vector3(3.62427, 8.37436e-06, 1.26213e-05)
-bones/26/rotation = Quaternion(2.86263e-08, 1.01669e-08, 0.382683, 0.92388)
-bones/27/position = Vector3(3.62425, -9.55549e-06, 2.77162e-06)
-bones/27/rotation = Quaternion(-1.41551e-09, -1.67101e-08, 0.382683, 0.92388)
-bones/28/position = Vector3(9.02614, 3.66697, 0.261094)
-bones/29/rotation = Quaternion(0.614426, 0.19093, 0.745177, 0.175322)
-bones/30/position = Vector3(13.4002, 8.97499e-06, 4.32469e-06)
-bones/30/rotation = Quaternion(-0.0834341, 0.328712, -0.192883, 0.920752)
-bones/31/position = Vector3(37.6304, -1.17591e-06, 2.12812e-06)
-bones/31/rotation = Quaternion(-5.2382e-10, -1.42605e-08, -0.632906, 0.774229)
-bones/32/position = Vector3(27.4736, 3.52869e-07, -5.04347e-06)
-bones/32/rotation = Quaternion(-0.614646, 0.0522655, -0.0478869, 0.785612)
-bones/33/position = Vector3(10.4239, -1.8096, 0.0310881)
-bones/33/rotation = Quaternion(-0.000404365, 0.000167518, 0.382683, 0.92388)
-bones/34/position = Vector3(3.62424, 6.93359e-06, -6.73534e-06)
-bones/34/rotation = Quaternion(2.03403e-09, 1.54602e-10, 0.382683, 0.92388)
-bones/35/position = Vector3(3.62424, -1.2352e-07, -3.29316e-06)
-bones/35/rotation = Quaternion(7.41327e-09, -1.48003e-08, 0.382683, 0.92388)
-bones/36/position = Vector3(9.00061, 3.76957, 0.528649)
-bones/37/position = Vector3(15.155, 10.5901, 2.36305e-05)
-bones/38/position = Vector3(-9.01942e-07, -0.606425, -3.23427)
-bones/38/rotation = Quaternion(-0.199882, -2.89802e-10, -5.80553e-09, 0.97982)
-bones/39/rotation = Quaternion(0.0146654, -4.16467e-09, 4.01512e-09, 0.999892)
-bones/40/position = Vector3(1.80277e-06, -0.606428, -26.4805)
-bones/41/position = Vector3(16.3519, -9.42281, -2.22254e-05)
-bones/42/position = Vector3(-5.3169e-07, 2.20492e-06, -2.62783)
-bones/42/rotation = Quaternion(-0.0083304, -8.3895e-10, -5.21991e-09, 0.999965)
-bones/43/position = Vector3(1.55213e-06, 5.45782, -16.9799)
-bones/43/rotation = Quaternion(0.0933962, -3.84569e-09, -9.74966e-09, 0.995629)
-bones/46/position = Vector3(25.5786, -5.95424, 1.87508)
-bones/46/rotation = Quaternion(-0.5, -0.5, -0.5, 0.5)
-bones/47/position = Vector3(25.5786, -5.95424, 1.87508)
-bones/47/rotation = Quaternion(-0.5, -0.5, -0.5, 0.5)
-bones/48/position = Vector3(24.7524, -5.95424, 1.87507)
-bones/48/rotation = Quaternion(-0.5, -0.5, -0.5, 0.5)
-bones/49/position = Vector3(53.3466, -0.994263, -0.0800323)
-bones/49/rotation = Quaternion(0.683012, -0.183012, 0.683013, -0.183012)
+bones/15/position = Vector3(3.59856, -0.0157475, 0.000555325)
+bones/15/rotation = Quaternion(-2.01536e-06, -8.02696e-05, 0.000398386, 1)
+bones/16/position = Vector3(19.8015, -0.020649, -0.000130773)
+bones/16/rotation = Quaternion(-7.75207e-11, 4.261e-08, -2.91643e-11, 1)
+bones/17/position = Vector3(26.0096, -0.00401013, -0.000169556)
+bones/17/rotation = Quaternion(4.8021e-08, 3.32061e-06, 0.014994, 0.999888)
+bones/18/position = Vector3(5.14075, 7.19129e-05, 6.32256e-07)
+bones/18/rotation = Quaternion(2.03855e-06, 0.000132376, -0.0153839, 0.999882)
+bones/19/position = Vector3(6.88822, -6.88171, 0.00180574)
+bones/19/rotation = Quaternion(-0.00012988, 2.32748e-05, 0.980821, -0.194912)
+bones/20/position = Vector3(15.4584, -0.0126944, -1.14194e-06)
+bones/20/rotation = Quaternion(5.99168e-08, 6.21581e-07, -0.109431, 0.993994)
+bones/21/position = Vector3(-2.34396e-05, 0.00410999, -6.47736)
+bones/21/rotation = Quaternion(-0.632906, 0.00973477, 0.774075, 0.0119125)
+bones/22/position = Vector3(13.4002, 3.75736e-05, -3.30476e-06)
+bones/22/rotation = Quaternion(2.12247e-06, -0.557827, 2.24697e-06, 0.829957)
+bones/23/position = Vector3(37.6304, -0.000464466, -5.95055e-06)
+bones/23/rotation = Quaternion(-1.01426e-06, 1.67494e-07, -0.0127331, 0.999919)
+bones/24/position = Vector3(27.4736, -0.000342071, 9.1711e-06)
+bones/24/rotation = Quaternion(0.706798, -5.04608e-06, -7.91529e-06, 0.707415)
+bones/25/position = Vector3(10.4239, -1.80955, -0.0311567)
+bones/25/rotation = Quaternion(0.000437894, 5.60618e-06, 5.09448e-06, 1)
+bones/26/position = Vector3(3.62425, -2.30964e-05, 1.88947e-05)
+bones/26/rotation = Quaternion(-6.54836e-11, -2.93599e-07, 2.56973e-07, 1)
+bones/27/position = Vector3(3.62426, -1.67082e-05, 1.70469e-05)
+bones/27/rotation = Quaternion(1.87356e-10, 5.37999e-07, -5.06931e-07, 1)
+bones/28/position = Vector3(9.02612, 3.667, 0.261049)
+bones/29/rotation = Quaternion(0.632906, -0.00974106, 0.774076, 0.0119074)
+bones/30/position = Vector3(13.4002, -0.000103089, 1.1826e-05)
+bones/30/rotation = Quaternion(2.33335e-06, 0.557827, -2.10525e-06, 0.829957)
+bones/31/position = Vector3(37.6304, -0.000472607, -3.59347e-06)
+bones/31/rotation = Quaternion(-5.16152e-07, -6.26092e-07, -0.0127372, 0.999919)
+bones/32/position = Vector3(27.4736, -0.000123248, -3.49537e-05)
+bones/32/rotation = Quaternion(-0.706798, 4.66238e-06, -1.03962e-05, 0.707415)
+bones/33/position = Vector3(10.4239, -1.80949, 0.0312682)
+bones/33/rotation = Quaternion(-0.000437243, -6.56354e-06, 6.10381e-06, 1)
+bones/34/rotation = Quaternion(-6.32099e-08, 6.55156e-07, 4.95323e-07, 1)
+bones/35/position = Vector3(3.62424, -1.82433e-05, 1.82837e-05)
+bones/35/rotation = Quaternion(7.92352e-09, -2.89394e-07, 2.54028e-07, 1)
+bones/36/position = Vector3(9.00058, 3.76963, 0.528804)
+bones/37/position = Vector3(15.155, 10.5902, -7.60878e-05)
+bones/38/position = Vector3(-6.74918e-08, -0.606467, -3.23426)
+bones/38/rotation = Quaternion(0.0160028, 2.82249e-08, 1.09541e-10, 0.999872)
+bones/39/rotation = Quaternion(-0.0208303, 2.98705e-09, -8.04848e-10, 0.999783)
+bones/40/position = Vector3(2.10078e-06, -0.60656, -26.4805)
+bones/41/position = Vector3(16.352, -9.42277, -0.000129991)
+bones/42/position = Vector3(-5.48625e-08, -3.87393e-05, -2.62783)
+bones/42/rotation = Quaternion(-0.0475258, 3.71813e-08, -8.12457e-10, 0.99887)
+bones/43/position = Vector3(1.90976e-06, 5.45773, -16.9799)
+bones/43/rotation = Quaternion(0.0018029, -2.49436e-10, 9.83784e-11, 0.999998)
+bones/46/position = Vector3(-108.078, 5.99121, 25.562)
+bones/46/rotation = Quaternion(0.707107, -0.000172485, -5.75052e-05, 0.707106)
+bones/47/position = Vector3(-108.078, 5.98309, 25.4965)
+bones/47/rotation = Quaternion(0.707107, -0.000172654, -5.76737e-05, 0.707107)
+bones/48/position = Vector3(-108.078, 5.99121, 25.562)
+bones/48/rotation = Quaternion(0.707107, -0.000172485, -5.75051e-05, 0.707107)
+bones/49/position = Vector3(-108.078, 5.99121, 25.562)
+bones/49/rotation = Quaternion(0.707106, -0.000174911, -5.99304e-05, 0.707108)
+
+[node name="AnimationPlayer" parent="DarkWizardBase" index="1"]
+speed_scale = 0.8
 
 [node name="PlayerBaseColShape" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -121,5 +216,103 @@ player_atk_handler = NodePath("../PlayerAttackHandler")
 script = ExtResource("6_vdra3")
 character_state_machine = NodePath("../CharacterStateMachine")
 character_smooth_rotation = NodePath("../CharacterSmoothRotation")
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.252988, 0.918642, -0.0531766)
+use_external_skeleton = true
+external_skeleton = NodePath("../DarkWizardBase/DarkWizard/Skeleton3D")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
+root_node = NodePath("../DarkWizardBase")
+libraries = {
+"": SubResource("AnimationLibrary_8i252")
+}
+tree_root = ExtResource("48_c0au1")
+anim_player = NodePath("../DarkWizardBase/AnimationPlayer")
+parameters/2HSpear_Attack_Feet/active = false
+parameters/2HSpear_Attack_Feet/internal_active = false
+parameters/2HSpear_Attack_Feet/request = 0
+parameters/2HSword_Attack/active = false
+parameters/2HSword_Attack/internal_active = false
+parameters/2HSword_Attack/request = 0
+parameters/2H_Spear_Attack_Mount/active = false
+parameters/2H_Spear_Attack_Mount/internal_active = false
+parameters/2H_Spear_Attack_Mount/request = 0
+parameters/Base_State/current_state = "Idle"
+parameters/Base_State/transition_request = ""
+parameters/Base_State/current_index = 0
+parameters/Idl/scale = 1.0
+parameters/Idle_Safe_State/current_state = ""
+parameters/Idle_Safe_State/transition_request = ""
+parameters/Idle_Safe_State/current_index = -1
+parameters/Idle_Un_2HSpear_attack/active = false
+parameters/Idle_Un_2HSpear_attack/internal_active = false
+parameters/Idle_Un_2HSpear_attack/request = 0
+parameters/Idle_Un_2HStaff/active = false
+parameters/Idle_Un_2HStaff/internal_active = false
+parameters/Idle_Un_2HStaff/request = 0
+parameters/Idle_Un_2HSword/active = false
+parameters/Idle_Un_2HSword/internal_active = false
+parameters/Idle_Un_2HSword/request = 0
+parameters/Idle_Un_DWield/active = false
+parameters/Idle_Un_DWield/internal_active = false
+parameters/Idle_Un_DWield/request = 0
+parameters/Idle_Un_Unarm/active = false
+parameters/Idle_Un_Unarm/internal_active = false
+parameters/Idle_Un_Unarm/request = 0
+parameters/Idle_Unsafe_Wep_State/current_state = ""
+parameters/Idle_Unsafe_Wep_State/transition_request = ""
+parameters/Idle_Unsafe_Wep_State/current_index = -1
+parameters/MoveTypeWalkSafe/current_state = ""
+parameters/MoveTypeWalkSafe/transition_request = ""
+parameters/MoveTypeWalkSafe/current_index = -1
+parameters/MoveTypeWalkUnsafe2H_Spear/current_state = ""
+parameters/MoveTypeWalkUnsafe2H_Spear/transition_request = ""
+parameters/MoveTypeWalkUnsafe2H_Spear/current_index = -1
+"parameters/OneShot 3/active" = false
+"parameters/OneShot 3/internal_active" = false
+"parameters/OneShot 3/request" = 0
+"parameters/OneShot 4/active" = false
+"parameters/OneShot 4/internal_active" = false
+"parameters/OneShot 4/request" = 0
+"parameters/OneShot 5/active" = false
+"parameters/OneShot 5/internal_active" = false
+"parameters/OneShot 5/request" = 0
+"parameters/OneShot 6/active" = false
+"parameters/OneShot 6/internal_active" = false
+"parameters/OneShot 6/request" = 0
+"parameters/OneShot 7/active" = false
+"parameters/OneShot 7/internal_active" = false
+"parameters/OneShot 7/request" = 0
+parameters/TimeScale/scale = 1.0
+"parameters/TimeScale 10/scale" = 1.0
+"parameters/TimeScale 11/scale" = 1.0
+"parameters/TimeScale 12/scale" = 1.0
+"parameters/TimeScale 13/scale" = 1.0
+"parameters/TimeScale 14/scale" = 1.0
+"parameters/TimeScale 15/scale" = 1.0
+"parameters/TimeScale 16/scale" = 1.0
+"parameters/TimeScale 17/scale" = 1.0
+"parameters/TimeScale 18/scale" = 1.0
+"parameters/TimeScale 19/scale" = 1.0
+"parameters/TimeScale 2/scale" = 1.0
+"parameters/TimeScale 20/scale" = 1.0
+"parameters/TimeScale 21/scale" = 1.0
+"parameters/TimeScale 22/scale" = 1.0
+"parameters/TimeScale 23/scale" = 1.0
+"parameters/TimeScale 3/scale" = 1.0
+"parameters/TimeScale 4/scale" = 1.0
+"parameters/TimeScale 5/scale" = 1.0
+"parameters/TimeScale 6/scale" = 1.0
+"parameters/TimeScale 7/scale" = 1.0
+"parameters/TimeScale 8/scale" = 1.0
+"parameters/TimeScale 9/scale" = 1.0
+parameters/Walk_Safe_State/current_state = ""
+parameters/Walk_Safe_State/transition_request = ""
+parameters/Walk_Safe_State/current_index = -1
+parameters/Walk_Unsf_Wep_state/current_state = ""
+parameters/Walk_Unsf_Wep_state/transition_request = ""
+parameters/Walk_Unsf_Wep_state/current_index = -1
 
 [editable path="DarkWizardBase"]
