@@ -1,0 +1,11 @@
+BaseState: {IDLE, WALK}
+    SafeState: {SAFE, UNSAFE}
+        WeaponState: {2H_Spear, 2H_Sword, Dwield, 2H_Staff, Unarmed}
+	    MoveState: {Feet, Mount, Fly}
+Ou
+
+BaseState: {IDLE, WALK}
+    MoveState: {Feet, Mount, Fly}
+        SafeState: {SAFE, UNSAFE}
+            WeaponState: {2H_Spear, 2H_Sword, Dwield, 2H_Staff, Unarmed}
+	    
