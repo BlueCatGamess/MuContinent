@@ -215,7 +215,7 @@ func MatchAttackAnim() -> void:
 	
 	current_atk_anim = anim_to_set;
 
-func OnStatChanged(character: CharacterBody3D, statName: String, statValue: int) -> void:
+func OnStatChanged(character: CharacterBody3D, statName: String, _statValue: int) -> void:
 	if character != self.main_actor:
 		return
 	
