@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ddfyfpoihq75l"]
+
+[ext_resource type="Texture2D" uid="uid://yc41wtbs4a6m" path="res://assets/items/sets/PadPants_lower_04b_m.png" id="1_fnkhs"]
+
+[resource]
+resource_name = "lower_04b_m.tga"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_fnkhs")
+metallic = 0.4
+roughness = 0.2

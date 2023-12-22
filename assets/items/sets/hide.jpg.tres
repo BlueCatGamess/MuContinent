@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b2jyhwcr2beut"]
+
+[ext_resource type="Texture2D" uid="uid://ia0t12yjd33i" path="res://assets/items/sets/PadPants_hide.png" id="1_as7rj"]
+
+[resource]
+resource_name = "hide.jpg"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_as7rj")
+roughness = 0.0

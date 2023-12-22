@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ui58iwrpiton"]
+
+[ext_resource type="Texture2D" uid="uid://dp2jt3arh5f3w" path="res://assets/items/sets/PadPants_lower_04c.png" id="1_dtvwu"]
+
+[resource]
+resource_name = "lower_04c.tga"
+albedo_texture = ExtResource("1_dtvwu")
+metallic = 0.4
+roughness = 0.2

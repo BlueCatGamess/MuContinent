@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cai4rdl8py55c"]
+
+[ext_resource type="Texture2D" uid="uid://bee5eqheogbcd" path="res://assets/items/sets/PadGloves_gloves_04.jpg" id="1_x6546"]
+
+[resource]
+resource_name = "gloves_04.jpg"
+albedo_texture = ExtResource("1_x6546")
+metallic = 0.4
+roughness = 0.2
