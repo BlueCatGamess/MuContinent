@@ -9,7 +9,7 @@ var available_attacks: Dictionary = {
 	,"Attack01"   : "Attack_Spell_Projectile"
 	,"Attack02"   : "Attack_DHspear_03-01"
 	,"Attack03"   : "Attack_Bow_01-01"
-	,"Attack04"   : "Attack_Dwield_01-01" } ##TODO use the attack name to know the attack type
+	,"Attack04"   : "Attack_Dwield_01-01" } ##TODO use the attack name to know the attack anim
 
 func ProcessAttack(target_info: Dictionary, attack_input: String) -> void:
 	if CheckAttack() == false:

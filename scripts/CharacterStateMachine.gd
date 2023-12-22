@@ -4,8 +4,9 @@ extends Component
 @export var character_movement: Node;
 #@export var character_movement_input: CharacterMovementInput;
 @export var anim_player: AnimationPlayer;
-#@export var character_stats: CharacterStats;
-var current_anim_speed: float = 0.8;
+@export var character_stats: CharacterStats;
+var current_move_anim_speed: float;
+var current_attack_anim_speed: float;
 
 const BASE_ANIM_BLEND: float = 0.15;
 
@@ -29,10 +30,13 @@ var current_atk_anim: String = "Attack_Unarm_01-01";
 
 
 func _ready():
-	
+	EBus.statChanged.connect(OnStatChanged);
 	##TODO make this get the value by the character stats
-	#current_anim_speed = (character_stats.movement_speed / character_stats.BASE_MOV_SPEED) * character_stats.BASE_ANIM_SPEED;
-	#
+	current_move_anim_speed = (character_stats.current_movement_speed / character_stats.BASE_MOV_SPEED) * character_stats.BASE_ANIM_SPEED;
+	current_attack_anim_speed = (character_stats.current_attack_speed / character_stats.BASE_ATK_SPEED) * character_stats.BASE_ANIM_SPEED;
+	## FIXME make current anim speed comes from character stats and be recalculated on stat change
+	## TODO make current ATTACK anim speed 
+	
 	for anim in anim_player.get_animation_list():
 		if anim.contains("Idle"):
 			animations["Idle"].append(anim);
@@ -65,7 +69,7 @@ func _physics_process(delta):
 func idle_state(delta):
 	MatchCurrentAnim("Idle");
 	
-	anim_player.play(current_anim, BASE_ANIM_BLEND, current_anim_speed);
+	anim_player.play(current_anim, BASE_ANIM_BLEND, current_move_anim_speed);
 	if self.main_actor.get_parent().name.left(5) == "Other":
 		return;
 	character_movement.Move(delta);
@@ -81,7 +85,7 @@ func check_idle_state():
 
 func walk_state(delta):
 	MatchCurrentAnim("Walk");
-	anim_player.play(current_anim, BASE_ANIM_BLEND, current_anim_speed);
+	anim_player.play(current_anim, BASE_ANIM_BLEND, current_move_anim_speed);
 	if self.main_actor.get_parent().name.left(5) == "Other":
 		return;
 	character_movement.Move(delta);
@@ -95,14 +99,14 @@ func check_walk_state():
 	return newState
 
 func attack_state():
-	anim_player.play(current_atk_anim, BASE_ANIM_BLEND, current_anim_speed + 0.2); ##TODO GET THIS FROM ATTACK SPEED
+	anim_player.play(current_atk_anim, BASE_ANIM_BLEND, current_attack_anim_speed); ##TODO GET THIS FROM ATTACK SPEED
 	#await anim_player.animation_finished;
 	
 	#if anim_player.get_current_animation_position() >= 0.6:
 	#	current_state = BaseState.IDLE;
 	#if character_movement_input:
 	#	character_movement_input.canMove = false;
-	#anim_player.play("Attack_Unarm_01-01", BASE_ANIM_BLEND, current_anim_speed * character_stats.AttackSpeed);
+	#anim_player.play("Attack_Unarm_01-01", BASE_ANIM_BLEND, current_move_anim_speed * character_stats.AttackSpeed);
 	#if anim_player.get_current_animation_position() >= BASE_ANIM_BLEND and anim_player.get_current_animation_position() <= 0.33:
 	#	var hitBoxCol = atkHandler.hitBox.get_node("HitBoxColShape");
 	#	hitBoxCol.disabled = false;
@@ -136,7 +140,7 @@ func Die():
 	var colShapes = self.main_actor.find_children("*", "CollisionShape3D");
 	for col in colShapes:
 		col.disabled = true;
-	anim_player.play("Die",BASE_ANIM_BLEND, current_anim_speed);
+	anim_player.play("Die",BASE_ANIM_BLEND, current_move_anim_speed);
 	
 	isDead = true
 	
@@ -210,3 +214,15 @@ func MatchAttackAnim() -> void:
 		return;
 	
 	current_atk_anim = anim_to_set;
+
+func OnStatChanged(character: CharacterBody3D, statName: String, statValue: int) -> void:
+	if character != self.main_actor:
+		return
+	
+	match statName:
+		"current_movement_speed":
+			current_move_anim_speed = (character_stats.current_movement_speed / character_stats.BASE_MOV_SPEED) * character_stats.BASE_ANIM_SPEED;
+			return
+		"current_attack_speed":
+			current_attack_anim_speed = (character_stats.current_attack_speed / character_stats.BASE_ATK_SPEED) * character_stats.BASE_ANIM_SPEED;
+			return
